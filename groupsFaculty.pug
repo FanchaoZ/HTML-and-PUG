@@ -1,0 +1,83 @@
+extends instructorLayout
+
+block content
+    style.
+        .btn-danger{
+            margin-left: 20px;
+        }
+        @media all and (max-width: 1024px) {
+
+            .card-body {
+                width: 100%;
+                margin: 0 auto;
+                padding: 0;
+                text-align: center;
+            }
+            .card-body h3{
+                padding-top: 20px;
+            }
+            .Card P {
+                text-align: left !important;
+            }
+            .btn-danger {
+                margin-left: 0;
+            }
+        }
+    #container-wrapper.container-fluid
+        .card.mb-12
+            .row.no-gutters
+                .card-body
+                    h3(style='padding-bottom: 10px; color:#ed722f;') Project Dashboard
+                    .Card.border.border-light.rounded(style='padding: 10px;')
+                        p(style='text-align: justify;padding: 25px;')
+                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis sit amet nulla id faucibus. Ut tincidunt ante libero, commodo porttitor nisl fermentum vel. Ut id magna elit. Fusce bibendum nulla vel leo blandit, ornare consequat lacus efficitur. Maecenas accumsan leo in libero sagittis ullamcorper. Sed et nulla tincidunt, mollis ex vitae, tincidunt tellus. Etiam commodo, sem vitae pellentesque scelerisque, mauris nunc tincidunt diam, eget rhoncus enim nulla eu sem. Nam rutrum nec ante ut maximus. Sed eget quam varius, efficitur nibh ut, vehicula sem. Vestibulum sed facilisis lorem. Sed dignissim est a neque pulvinar laoreet. Nulla ultrices lacus non luctus condimentum. Praesent mollis arcu massa, vitae sodales sapien mollis vitae. Nunc congue sem ut libero porttitor vestibulum sit amet at magna. Morbi ac lectus feugiat, consequat ex id, ultrices nisl. Etiam ut fringilla dolor, vel aliquam mauris. Quisque placerat augue lectus, vitae efficitur magna interdum laoreet. Duis nec rhoncus ipsum.
+                    br
+                    .Card.border.border-light.rounded.table-responsive(style='padding: 10px;')
+                        table.table(style='border-radius: 10px;')
+                            thead(style='background-color: #F55600;color:white;')
+                                tr
+                                    th(scope='col') Group Name
+                                    th(scope='col') Status
+                                    th(scope='col') Members
+                                    th(scope='col') Due Date
+                                    th(scope='col') Action
+                            tbody
+                                tr
+                                    td Group 1
+                                    td 4/6
+                                    td
+                                        | Sam
+                                        br
+                                        | Ben
+                                        br
+                                        | Den
+                                        br
+                                        | Ron
+                                    td 28/07/2021
+                                    td(style='width: 25%;')
+                                        button.btn.btn-primary(type='button') Approve
+                                        button.btn.btn-danger(type='button' ) Dissolve
+                                tr
+                                    td Group 2
+                                    td 2/6
+                                    td
+                                        | Den
+                                        br
+                                        | Ron
+                                    td 26/07/2021
+                                    td
+                                        button.btn.btn-primary(type='button') Approve
+                                        button.btn.btn-danger(type='button') Dissolve
+                                tr
+                                    td Group 3
+                                    td 3/6
+                                    td
+                                        | Sam
+                                        br
+                                        | Ben
+                                        br
+                                        | Ron
+                                    td 27/07/2021
+                                    td
+                                        button.btn.btn-primary(type='button') Approve
+                                        button.btn.btn-danger(type='button') Dissolve

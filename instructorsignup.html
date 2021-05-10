@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<!-- Then I need to clone NodeJS and implement template to
+Render what I need-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- <link href="img/logo/logo.png" rel="icon"> -->
+    <title>Clazzroom - Instructor Signup</title>
+    <link
+      href="/bower_components/vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="/bower_components/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="/bower_components/css/ruang-admin.min.css" rel="stylesheet" />
+    <!-- Select2 -->
+    <link
+      href="/bower_components/vendor/select2/dist/css/select2.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+
+  <body class="bg-gradient-login">
+    <nav
+      class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top"
+    >
+      <h4 class="alert-heading ml-0" style="color: white">Clazzroom</h4>
+    </nav>
+    <div
+      class="alert alert-success col-xl-4 col-lg-10 col-md-8 ml-auto mr-auto mb-0"
+      role="alert"
+    >
+      <h4 class="alert-heading">Welcome, Professor, you are almost there!</h4>
+      <p>Please fill out the required fields below to complete your profile.</p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-xl-6 col-lg-12 col-md-9">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="login-form">
+              <div class="mt-0 text-center">
+                <h1 class="h4 mb-0" style="color: #ed722f">Profile Picture</h1>
+              </div>
+              <div class="text-center mt-3 mb-3">
+                <i class="fas fa-users fa-2x text-info"></i>
+              </div>
+              <form class="user" method="POST" action="/instructorLogin">
+                <div class="form-group">
+                  <div class="custom-file">
+                    <input
+                      type="file"
+                      name="profile"
+                      class="custom-file-input"
+                      id="customFile"
+                    />
+                    <label class="custom-file-label" for="customFile"
+                      >Upload profile picture</label
+                    >
+                  </div>
+                </div>
+                <div class="mt-4 text-center">
+                  <h1 class="h4 mb-2" style="color: #ed722f">
+                    Personal Information
+                  </h1>
+                </div>
+                <div class="form-group">
+                  <input
+                    type="nickname"
+                    name="nickname"
+                    class="form-control"
+                    id="nickname"
+                    aria-describedby="nickname info"
+                    placeholder="Nickname (optional)"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="dob"
+                    name="dob"
+                    class="form-control"
+                    id="dateob"
+                    placeholder="Date of Birth (dd/mm/year)"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="phone"
+                    name="phone"
+                    class="form-control"
+                    id="phonenum"
+                    placeholder="Phone number"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="address"
+                    name="address"
+                    class="form-control"
+                    id="address"
+                    placeholder="Address"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="liurl"
+                    name="liurl"
+                    class="form-control"
+                    id="liurl"
+                    placeholder="LinkedIn Profile (url)"
+                  />
+                </div>
+                <div class="form-group">
+                    <input
+                      type="personalurl"
+                      name="personalurl"
+                      class="form-control"
+                      id="personalurl"
+                      placeholder="Personal Profile (url)"
+                    />
+                </div>
+                <div class="form-group">
+                    <input
+                      type="role"
+                      name="role"
+                      class="form-control"
+                      id="role"
+                      placeholder="Job Title / Role"
+                    />
+                </div>
+                <div class="mt-4 text-center">
+                  <h1 class="h4 mb-2" style="color: #ed722f">Academics</h1>
+                </div>
+                <div class="card mb-4">
+                  <div
+                    class="card-header py-0 d-flex flex-row align-items-center justify-content-between"
+                  ></div>
+                  <div class="card-body">
+                    <div class="form-group">
+                      <label for="select2Multiple2">Courses You Teach</label>
+                      <select
+                        class="select2-multiple2 form-control"
+                        name="currentcourses"
+                        multiple="multiple"
+                        id="select2Multiple2"
+                      >
+                        <option value="">Select</option>
+                        <option value="ECE 601">ECE 601</option>
+                        <option value="ECE 602">ECE 602</option>
+                        <option value="ECE 603">ECE 603</option>
+                        <option value="ECE 604">ECE 604</option>
+                        <option value="ECE 605">ECE 605</option>
+                        <option value="ECE 606">ECE 606</option>
+                        <option value="ECE 607">ECE 607</option>
+                        <option value="ECE 608">ECE 608</option>
+                        <option value="ECE 609">ECE 609</option>
+                        <option value="ECE 610">ECE 610</option>
+                        <option value="ECE 611">ECE 611</option>
+                        <option value="ECE 612">ECE 612</option>
+                        <option value="ECE 613">ECE 613</option>
+                        <option value="ECE 614">ECE 614</option>
+                        <option value="ECE 617">ECE 617</option>
+                        <option value="ECE 621">ECE 621</option>
+                        <option value="ECE 627">ECE 627</option>
+                        <option value="ECE 628">ECE 628</option>
+                        <option value="ECE 630">ECE 630</option>
+                        <option value="ECE 631">ECE 631</option>
+                        <option value="ECE 632">ECE 632</option>
+                        <option value="ECE 633">ECE 633</option>
+                        <option value="ECE 634">ECE 634</option>
+                        <option value="ECE 635">ECE 635</option>
+                        <option value="ECE 636">ECE 636</option>
+                        <option value="ECE 637">ECE 637</option>
+                        <option value="ECE 638">ECE 638</option>
+                        <option value="ECE 639">ECE 639</option>
+                        <option value="ECE 642">ECE 642</option>
+                        <option value="ECE 644">ECE 644</option>
+                        <option value="ECE 647">ECE 647</option>
+                        <option value="ECE 649">ECE 649</option>
+                        <option value="ECE 650">ECE 650</option>
+                        <option value="ECE 651">ECE 651</option>
+                        <option value="ECE 652">ECE 652</option>
+                        <option value="ECE 653">ECE 653</option>
+                        <option value="ECE 654">ECE 654</option>
+                        <option value="ECE 655">ECE 655</option>
+                        <option value="ECE 656">ECE 656</option>
+                        <option value="ECE 657">ECE 657</option>
+                        <option value="ECE 657A">ECE 657A</option>
+                        <option value="ECE 658">ECE 658</option>
+                        <option value="ECE 659">ECE 659</option>
+                        <option value="ECE 6601PD">ECE 6601PD</option>
+                        <option value="ECE 6602PD">ECE 6602PD</option>
+                        <option value="ECE 6603PD">ECE 6603PD</option>
+                        <option value="ECE 6604PD">ECE 6604PD</option>
+                        <option value="ECE 6605PD">ECE 6605PD</option>
+                        <option value="ECE 6606PD">ECE 6606PD</option>
+                        <option value="ECE 6607PD">ECE 6607PD</option>
+                        <option value="ECE 6608PD">ECE 6608PD</option>
+                        <option value="ECE 6609PD">ECE 6609PD</option>
+                        <option value="ECE 6610PD">ECE 6610PD</option>
+                        <option value="ECE 6611PD">ECE 6611PD</option>
+                        <option value="ECE 6612PD">ECE 6612PD</option>
+                        <option value="ECE 6613PD">ECE 6613PD</option>
+                        <option value="ECE 6614PD">ECE 6614PD</option>
+                        <option value="ECE 6615PD">ECE 6615PD</option>
+                        <option value="ECE 6616PD">ECE 6616PD</option>
+                        <option value="ECE 6617PD">ECE 6617PD</option>
+                        <option value="ECE 6618PD">ECE 6618PD</option>
+                        <option value="ECE 661">ECE 661</option>
+                        <option value="ECE 662">ECE 662</option>
+                        <option value="ECE 663">ECE 663</option>
+                        <option value="ECE 664">ECE 664</option>
+                        <option value="ECE 665">ECE 665</option>
+                        <option value="ECE 666">ECE 666</option>
+                        <option value="ECE 667">ECE 667</option>
+                        <option value="ECE 668">ECE 668</option>
+                        <option value="ECE 669">ECE 669</option>
+                        <option value="ECE 671">ECE 671</option>
+                        <option value="ECE 672">ECE 672</option>
+                        <option value="ECE 675">ECE 675</option>
+                        <option value="ECE 676">ECE 676</option>
+                        <option value="ECE 677">ECE 677</option>
+                        <option value="ECE 678">ECE 678</option>
+                        <option value="ECE 682">ECE 682</option>
+                        <option value="ECE 683">ECE 683</option>
+                        <option value="ECE 686">ECE 686</option>
+                        <option value="ECE 688">ECE 688</option>
+                        <option value="ECE 699">ECE 699</option>
+                        <option value="ECE 700">ECE 700</option>
+                        <option value="ECE 710">ECE 710</option>
+                        <option value="ECE 715">ECE 715</option>
+                        <option value="ECE 716">ECE 716</option>
+                        <option value="ECE 720">ECE 720</option>
+                        <option value="ECE 722">ECE 722</option>
+                        <option value="ECE 725">ECE 725</option>
+                        <option value="ECE 730">ECE 730</option>
+                        <option value="ECE 731">ECE 731</option>
+                        <option value="ECE 738">ECE 738</option>
+                        <option value="ECE 740">ECE 740</option>
+                        <option value="ECE 741">ECE 741</option>
+                        <option value="ECE 750">ECE 750</option>
+                        <option value="ECE 751">ECE 751</option>
+                        <option value="ECE 752">ECE 752</option>
+                        <option value="ECE 753">ECE 753</option>
+                        <option value="ECE 754">ECE 754</option>
+                        <option value="ECE 755">ECE 755</option>
+                        <option value="ECE 760">ECE 760</option>
+                        <option value="ECE 765">ECE 765</option>
+                        <option value="ECE 768">ECE 768</option>
+                        <option value="ECE 770">ECE 770</option>
+                        <option value="ECE 780">ECE 780</option>
+                        <option value="ECE 781">ECE 781</option>
+                        <option value="ECE 782">ECE 782</option>
+                        <option value="ECE 783">ECE 783</option>
+                        <option value="ECE 784">ECE 784</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1"
+                    >List any personal and/or research interests</label
+                  >
+                  <textarea
+                    name="interests"
+                    class="form-control"
+                    id="interests"
+                    rows="3"
+                  ></textarea>
+                </div>
+
+                <span class="form-group">
+                  <button
+                    class="btn btn-info btn-block"
+                    type="submit"
+                    value="submit"
+                  >
+                    Continue to Clazzroom
+                  </button>
+                  <a
+                    href="/instructorSignup"
+                    class="btn btn-danger btn-block"
+                    id="cancel"
+                    >Cancel</a
+                  >
+                </span>
+
+                <!-- <div id="msg">
+                      <pre></pre>
+                    </div> -->
+
+                <!-- Select2 -->
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Login Content -->
+    <script src="/bower_components/vendor/jquery/jquery.min.js"></script>
+    <script src="/bower_components/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/bower_components/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Select2 -->
+    <script src="/bower_components/vendor/select2/dist/js/select2.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Select2 Multiple
+        $(".select2-multiple").select2();
+        $(".select2-multiple2").select2();
+        $(".select2-multiple3").select2();
+      });
+    </script>
+
+    <!-- <script src="js/ruang-admin.min.js"></script> -->
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- <link href="img/logo/logo.png" rel="icon"> -->
+  <title>Clazzroom - Login</title>
+  <link href="/bower_components/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="/bower_components/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="/bower_components/css/ruang-admin.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/student_reg.css">
+
+</head>
+
+<body class="bg-gradient-login">
+  <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top">
+    <h1 class="clazzroom_header">Clazzroom</h1>
+    <div class="d-flex flex-nowrap ml-auto justify-content-between">
+      <button type="button" class="btn btn-danger order-1">Login</button>
+      <button type="button" class="btn btn-primary order-2">Sign up</button>
+    </div>
+  </nav>
+
+  <!-- Login Content -->
+  <div class="container-login">
+    <div class="row justify-content-center">
+      <div class="col-xl-6 col-lg-12 col-md-9">
+        <div class="card shadow-sm my-5">
+          <div class="card-body p-10">
+            <div class="card-body">
+                <div class="alert alert-success" role="alert">
+                  <h1 class="alert-heading">Congratulations!</h1>
+                  <p>
+                    Your isntructor account has been successfully created. A seperate email was sent to
+                    (INSERT EMAIL HERE) confirming your account creation.
+                  </p>
+                  <hr>
+                  <p class= "mb-0">
+                      Welcome to Clazzroom. We hope our application enhances your classroom!
+                  </p>
+                  <form class="user" method="POST" action="/instructorRegistrationSuccess">
+                    </div>
+                    <div class="form-group">
+                      <a class="btn btn-primary mb-1 btn-block" href="/login">Continue to Clazzroom</a>
+                    </div>
+                  </form>
+                  <hr>
+                  <div class="text-center">
+                    <a class="font-weight-bold small" href="register.html">Forgot your password? Try recovering it!</a>
+                  </div>
+                  <div class="text-center">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Login Content -->
+  <script src="/bower_components/vendor/jquery/jquery.min.js"></script>
+  <script src="/bower_components/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/bower_components/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="/bower_components/js/ruang-admin.min.js"></script>
+</body>
+
+</html>

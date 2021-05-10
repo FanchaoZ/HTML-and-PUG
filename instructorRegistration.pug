@@ -1,0 +1,72 @@
+extends layoutWithoutSidebar
+
+block topbar 
+    ul.navbar-nav.ml-auto
+        li.nav-item.dropdown.no-arrow.mr-3
+            a.btn.btn-sm.btn-info(href='/loginPage') Login
+        li.nav-item.dropdown.no-arrow.mr-3
+            a.btn.btn-sm.btn-warning(href='/studentInstructorSignup') Signup 
+block content
+  // Login Content
+  #container-wrapper.container-fluid
+  // Login Content
+  .container-login
+    .row.justify-content-center
+      .col-xl-6.col-lg-12.col-md-9
+        .card.shadow-sm.my-5
+          .card-body.p-10
+            .row
+              .col-lg-12
+                .login-form
+                  .text-center
+                    h1.h4.text-gray-900.mb-4 Register Instructor Account!
+                  form.user(method='POST' action='/instructorRegistration')
+                    input(type="hidden", name="_csrf", value=_csrf)
+                    .form-group
+                      input.form-control(type='text' name='instructor_fullname' id="instructor_fullname" placeholder='Full Name*')
+                    .form-group
+                      input.form-control(type='email' name='instructor_email' id="instructor_email" placeholder='Enter Email Address*')
+                    .form-group
+                      input.form-control(type='password' name='instructor_password' id="instructor_password" placeholder='Enter password*')
+                      //
+                        <div class="custom-control custom-checkbox small" style="line-height: 1.5rem;">
+                        <input type="checkbox" class="custom-control-input" id="customCheck">
+                        <label class="custom-control-label" for="customCheck">Remember
+                        Me</label>
+                    .form-group
+                      button.btn.btn-warning.mb-1.btn-block(type='submit' name='submit') Register Account
+                    // <hr>
+                    //
+                      <a href="index.html" class="btn btn-google btn-block">
+                      <i class="fab fa-google fa-fw"></i> Login with Google
+                      </a>
+                      <a href="index.html" class="btn btn-facebook btn-block">
+                      <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
+                      </a>
+                  //
+                    <script>
+                    let information = [];
+                    const addInfo = (ev)=> {
+                    // ev.preventDefault();
+                    let infoJson = {
+                    id: Math.random(1,100),
+                    verif_code: document.getElementById('valcode').value,
+                    new_password: document.getElementById('newpass').value,
+                    verify_password: document.getElementById('verpass').value
+                    }
+                    information.push(infoJson);
+                    document.forms[0].reset(); //clear form for next entries
+                    console.warn('added', {information});
+                    // let pre = document.querySelector('#msg pre');
+                    // pre.textContent = '\n' + JSON.stringify(information, '\t', 2);
+                    localStorage.setItem('JSON_Info', JSON.stringify(information));
+                    }
+                    document.addEventListener('DOMContentLoaded', () => {
+                    document.getElementById('confirm_btn').addEventListener('click', addInfo);
+                    });
+                    </script>
+                  hr
+                  .text-center
+                    a.font-weight-bold.small(href='register.html') Forgot your password? Try recovering it!
+                  .text-center
+  // Login Content

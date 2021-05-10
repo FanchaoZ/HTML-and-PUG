@@ -1,0 +1,29 @@
+extends layoutWithoutSidebar
+
+block topbar 
+block content
+  // Login Content
+  #container-wrapper.container-fluid
+  // Login Content
+  .container-login
+    .row.justify-content-center
+      .col-xl-6.col-lg-12.col-md-9
+        .card.shadow-sm.my-5
+          .card-body.p-10
+            .card-body
+              .alert.alert-success(role='alert')
+                h1.alert-heading Congratulations!
+                p
+                  | Your isntructor account has been successfully created. A seperate email was sent to
+                  | (INSERT EMAIL HERE) comfirming your account creation.
+                hr
+                p.mb-0
+                  | Welcome to Clazzroom. We hope our application enhances your classroom!
+                form.user(method='POST' action='/instructorRegistrationSuccess')
+                  input(type="hidden", name="_csrf", value=_csrf)
+              .form-group
+                a.btn.btn-primary.mb-1.btn-block(href = '/loginPage', id = 'continue') Continue to Clazzroom
+              hr
+              .text-center
+                a.font-weight-bold.small(href='/forgotPassword') Forgot your password? Try recovering it!
+              .text-center

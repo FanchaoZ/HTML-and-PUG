@@ -1,0 +1,322 @@
+extends instructorlayout
+
+block content
+
+    // Login Content
+    #container-wrapper.container-fluid
+
+        style.
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            li {
+                list-style: none;
+            }
+
+            .main {
+                width: 960px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .m-left, .m-right {
+                width: 465px;
+            }
+
+            .m-left h2 {
+                text-align: center;
+                color: rgb(254, 214, 166);
+                background-color: rgb(246, 95, 5);
+                width: 100%;
+                border-radius: 25px;
+                padding: 5px 0;
+                font-size: 18px;
+            }
+
+            .card-container {
+                border: 1px solid #000;
+                border-radius: 10px;
+                margin-top: 10px;
+                padding: 0 10px;
+            }
+
+            .card-content {
+                height: 250px;
+            }
+
+            .card-content:nth-child(1) {
+                border-bottom: 1px solid #000;
+            }
+
+            .card-content h3 {
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+                color: rgb(254, 214, 166);
+            }
+
+            .item-list {
+                display: flex;
+                justify-content: space-around;
+                color: #fff;
+                background-color: rgb(118, 49, 191);
+                font-size: 13px;
+                padding: 5px 0px;
+                border-radius: 15px;
+            }
+
+            .show-list {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin-top: 15px;
+                padding: 0 15px;
+            }
+
+            .show-list img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+
+            button {
+                width: 80px;
+                padding: 5px 0;
+                color: #fff;
+                background-color: red;
+                text-align: center;
+                border: none;
+                border-radius: .25rem;
+            }
+
+            .green {
+                background-color: rgb(34, 158, 75);
+            }
+
+            .m-right h2 {
+                height: 80px;
+                line-height: 80px;
+                color: rgb(254, 214, 166);
+            }
+
+            .r-list {
+                display: flex;
+                font-size: 14px;
+                justify-content: space-around;
+                color: rgb(254, 214, 166);
+                background-color: rgb(246, 95, 5);
+                width: 100%;
+                border-radius: 25px;
+                padding: 5px 20px;
+            }
+
+            .ece-list {
+                width: 100%;
+                display: flex;
+                font-size: 14px;
+                justify-content: space-around;
+                align-items: center;
+                padding: 5px 20px;
+                border: 1px solid #000;
+                border-radius: 10px;
+                margin-top: 10px;
+            }
+
+            .ece-list:nth-child(1) h3 {
+                color: rgb(140, 1, 215);
+            }
+
+            .orange {
+                background-color: rgb(251, 129, 62);
+            }
+
+            .purple {
+                background-color: rgb(140, 1, 215);
+            }
+
+            .colume li {
+                width: 25%;
+                text-align: center;
+            }
+
+            @media all and (max-width: 1000px) {
+                .colume {
+                    width: 90%;
+                    margin: 20px auto;
+                }
+
+                .container-fluid {
+                    width: 90%;
+                    margin: 0 auto;
+                    padding: 0;
+                }
+
+                .card-content {
+                    padding: 0;
+                    height: auto;
+                }
+
+                .card-content h3 {
+                    height: 2rem;
+                }
+
+                .ece-list h3 {
+                    font-size: 1rem;
+                }
+
+                .show-list {
+                    padding: 0 0;
+                }
+
+                .card-content li {
+                    width: 25%;
+                    text-align: center;
+                }
+
+                .colume li button {
+                    width: 70px;
+                    padding: 2px;
+                }
+
+                .colume li {
+                    text-align: center;
+                }
+
+                .r-list {
+                    padding: 5px 10px;
+                }
+
+                .r-list li:nth-child(1) {
+                    width: 15%;
+                }
+
+                .r-list li:nth-child(2) {
+                    width: 40%;
+                }
+
+                .r-list li:nth-child(3) {
+                    width: 25%;
+                }
+
+                .r-list li:nth-child(4) {
+                    width: 20%;
+                }
+
+                .ece-list {
+                    padding: 5px 10px;
+                }
+
+                .ece-list li:nth-child(1) {
+                    width: 15%;
+                }
+
+                .ece-list li:nth-child(2) {
+                    width: 45%;
+                }
+
+                .ece-list li:nth-child(3) {
+                    width: 20%;
+                }
+
+                .ece-list li:nth-child(4) {
+                    width: 20%;
+                }
+            }
+
+
+
+        main.row
+        .colume
+            h2 Class List of ECE 400
+            .card-container
+            .card-content
+                h3
+                | Admitted Students
+                .card-item
+                ul.item-list
+                    li
+                      | Profile
+                    li
+                      | Name
+                    li
+                      | Date Enrolled
+                    li
+                      | Actions
+                .card-show
+                ul.show-list
+                    li
+                        img(src='/bower_components/./img/1.jpg' alt='')
+                    li
+                       | John.L.Doe
+                    li
+                       | Sept 19/21
+                    li
+                        button Remove
+            .card-content
+                h3
+                | Pending Students
+                .card-item
+                ul.item-list
+                    li
+                      | Profile
+                    li
+                      | Name
+                    li
+                      | Actions
+                    li
+                      | Actions
+                .card-show
+                ul.show-list
+                    li
+                      img(src='/bower_components/./img/2.jpg' alt='')
+                    li
+                      | Benjamin Franklin
+                    li
+                       button.green Admit
+                    li
+                       button Reject
+        .colume
+            h2 Current courses
+            div
+            ul.r-list
+                li
+                  | Courses
+                li
+                  | Courses Name
+                li
+                  | # of student enrolled
+                li
+                  | Actions
+            div
+            ul.ece-list
+                li
+                    h3
+                       | ECE 650
+                li
+                    | Methods and Tools for Software Engineering
+                li
+                    | 63/65
+                li
+                    button.orange
+                        | Selected
+            ul.ece-list
+                li
+                     h3
+                        | ECE 650
+                li
+                    | Methods and Tools for Software Engineering
+                li
+                    | 63/65
+                li
+                    button.purple
+                         | View class
+    // Scroll to top
+    a.scroll-to-top.rounded(href='#page-top')
+        i.fas.fa-angle-up
+    script(src='/bower_components/vendor/jquery/jquery.min.js')
+    script(src='/bower_components/vendor/bootstrap/js/bootstrap.bundle.min.js')
+    script(src='/bower_components/vendor/jquery-easing/jquery.easing.min.js')
+
